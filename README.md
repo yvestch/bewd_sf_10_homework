@@ -24,3 +24,18 @@ Instructions
 Only use this repository for your homework and any files you are contributing in class.
 
 If any files are in the pull request outside of your personal folder, we will send it back to you to fix it!
+
+Weekly Homework
+----------------
+
+**Submit homework by pushing to your bewd_sf_10_homework repo, then submit a pull request**
+Homework is given each Monday, and is always due the next Monday. Feedback on each assignment will be complete by Wednesday.
+
+| Homework # | Assignment | Class Topic |
+| :--------: | :--------: | ----------- |
+| 1          | Push `reverse_it.rb` to Github | [01_Intro](https://github.com/ga-students/bewd_sf_10/tree/master/01_Intro/slides) |
+| 2          |            | - |
+| 3          |            | - |
+| 4          |            | - |
+| 5          |            | - |
+| ...        |            | - |
