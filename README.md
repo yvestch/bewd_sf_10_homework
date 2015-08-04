@@ -31,11 +31,11 @@ Weekly Homework
 **Submit homework by pushing to your bewd_sf_10_homework repo, then submit a pull request**
 Homework is given each Monday, and is always due the next Monday. Feedback on each assignment will be complete by Wednesday.
 
-| Homework # | Assignment | Class Topic |
-| :--------: | :--------: | ----------- |
-| 1          | Push `magic.rb` to Github.<br/> Read ch. 1-7 [Learn to Code](http://en.calameo.com/read/0044342460ca1f45cf51c) by Chris Pine (pdf download available in Slack) | [01_Intro](https://github.com/ga-students/bewd_sf_10/tree/master/01_Intro/slides) |
-| 2          |            | - |
-| 3          |            | - |
-| 4          |            | - |
-| 5          |            | - |
-| ...        |            | - |
+| Homework # | Assignment | Class Topic | Due Date | 
+| :--------: | ---------- | ----------- | -------- |
+| 1          | Push `magic.rb` to Github. <br/> Read ch. 1-7 [Learn to Code](http://en.calameo.com/read/0044342460ca1f45cf51c) by Chris Pine (pdf download available in Slack) | [01_Intro](https://github.com/ga-students/bewd_sf_10/tree/master/01_Intro/slides) | Monday, August 3rd |
+| 2          |            | - | - |
+| 3          |            | - | - |
+| 4          |            | - | - |
+| 5          |            | - | - |
+| ...        |            | - | - |
