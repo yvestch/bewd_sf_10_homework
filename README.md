@@ -34,7 +34,7 @@ Homework is given each Monday, and is always due the next Monday. Feedback on ea
 | Homework # | Assignment | Class Topic | Due Date | 
 | :--------: | ---------- | ----------- | -------- |
 | 1          | Push `magic.rb` to Github. <br/> Read ch. 1-7 [Learn to Code](http://en.calameo.com/read/0044342460ca1f45cf51c) by Chris Pine (pdf download available in Slack) | [01_Intro](https://github.com/ga-students/bewd_sf_10/tree/master/01_Intro/slides) | Monday, August 3rd |
-| 2          |            | - | - |
+| 2          |            | [02_Ruby_Fundamentals](https://github.com/ga-students/bewd_sf_10/tree/master/02_Ruby_Fundamentals_1/slides) | - |
 | 3          |            | - | - |
 | 4          |            | - | - |
 | 5          |            | - | - |
