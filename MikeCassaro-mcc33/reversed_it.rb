@@ -1,6 +1,6 @@
 def reversed_it(word)
   array = word.downcase.chars
-  # I created a new variable called array & set it equal to the word changed into an array
+  # I created a new variable called array that is equal to the method's argument after being transformed to an array
   reversed_word = ""
   # I created a new variable for a reversed_word and set it empty
   reversed_word << array.pop until array.empty?
