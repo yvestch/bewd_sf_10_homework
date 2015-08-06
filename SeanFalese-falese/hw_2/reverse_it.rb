@@ -13,11 +13,8 @@ end
 def pass_check(pass)
   if pass.downcase == reverse_it(pass).downcase
     puts "Come on in!"
-
   else
     puts "#{pass.capitalize} is not the password. get the hell out!"
-
-
   end
 end
 
@@ -47,27 +44,18 @@ drink = gets.chomp
 
 goodbye = "Tight, #{name.capitalize}, that'll be $#{drink.length} dollars"
 
-
-
-
 puts greeting
-if
-  drink == "purple drank"
+
+if drink == "purple drank"
     puts "time to chop it up and screw it,
       #{name.reverse} #{drink.reverse}
       #{drink.length.to_s} #{drink<< "s"}
       #{drink.strip}
       #{drink.prepend("dope ").upcase}"
+    end
 
+  puts goodbye
 
-end
-
-
-
-puts goodbye
-
-
-
-else
-  puts "boo you suck!"
+  else
+    puts "boo you suck!"
 end
