@@ -1,4 +1,4 @@
-
+=begin
 #https://twitter.com/HackerNewsOnion
 Programming is 1% inspiration, 99% trying to get your environment working.
 -----------
@@ -15,3 +15,4 @@ Enterprise CTO not impressed by pair programming.
 "We often have hundreds of developers working on the same thing."
 -----------
 Obama – "The national technical debt is increasing at an alarming rate. We have to stop writing PHP."
+=end
