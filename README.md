@@ -31,11 +31,11 @@ Weekly Homework
 **Submit homework by pushing to your bewd_sf_10_homework repo, then submit a pull request**
 Homework is given each Monday, and is always due the next Monday. Feedback on each assignment will be complete by Wednesday.
 
-| Homework # | Assignment | Class Topic | Due Date | Feedback <br/> _(if hw submitted by due date)_ |
+| Homework # | Assignment | Class Topic | Due Date | Feedback <br> _(if hw submitted by due date)_ |
 | :--------: | ---------- | ----------- | -------- | -------- |
 | 1          | Push `magic.rb` to Github. <br/> Read ch. 1-7 Learn to Code by Chris Pine (pdf download available in Slack) | [01_Intro](https://github.com/ga-students/bewd_sf_10/tree/master/01_Intro/slides) | Monday, August 3rd | Wednesday, August 5th |
 | 2          | Complete reverse_it.rb on your own! <br/> Read ch. 6-9 Well Grounded Rubyist. (pdf download available in Slack) | [02_Ruby_Fundamentals](https://github.com/ga-students/bewd_sf_10/tree/master/02_Ruby_Fundamentals_1/slides) | Wednesday, August 5th | Wednesday, August 5th |
-| 3          | Complete ch. 6-10 in Well Grounded Rubyist (found in-) <br> On your own, use each method for hashes we used in class today (.length, .merge, .merge!, .keys, .values, .has_key?, .has_value?) | [03_Ruby_Fundamentals](https://github.com/ga-students/bewd_sf_10/tree/master/03_Ruby_Fundamentals)  | Monday, August 10th | Wednesday, August 12th |
-| 4          |            | - | - |
-| 5          |            | - | - |
-| ...        |            | - | - |
+| 3          | Complete ch. 6-10 in Well Grounded Rubyist (found in Slack's channel info section in pinned items) <br> On your own, use each method for hashes we used in class today (.length, .merge, .merge!, .keys, .values, .has_key?, .has_value?) | [03_Ruby_Fundamentals](https://github.com/ga-students/bewd_sf_10/tree/master/03_Ruby_Fundamentals) | Monday, August 10th | Wednesday, August 12th |
+| 4          |            | - | - | - |
+| 5          |            | - | - | - |
+| ...        |            | - | - | - |
