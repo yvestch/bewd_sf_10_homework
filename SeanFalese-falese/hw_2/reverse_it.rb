@@ -33,7 +33,6 @@ if var1 == "yes"
   puts "enter the password".upcase
   pass = gets.strip.downcase
     # binding.pry
-
 puts pass_check(pass)
 
 puts "Hey #{name.capitalize}  What you drinkin kid?"
