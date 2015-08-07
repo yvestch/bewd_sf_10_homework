@@ -31,6 +31,8 @@ puts "look for an item in the bag"
     puts "Its in the bag"
   else
     puts "its not here"
+    puts "here are the keys: #{stash.keys}"
+    puts "here are the values: #{stash.values}"
   end
 end
   #begin program here
