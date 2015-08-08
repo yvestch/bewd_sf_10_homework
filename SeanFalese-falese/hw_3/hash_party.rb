@@ -21,19 +21,18 @@ def hash_supply()
       second_hash["type"] = types
       second_hash["item"] = list
   stash.merge!(second_hash)
-  puts "The length of this hash is  #{stash.length}"
-  puts "here are the keys: #{stash.keys}"
-  puts "here are the values: #{stash.values}"
+    puts "The length of this hash is  #{stash.length}"
+    puts "here are the keys: #{stash.keys}"
+    puts "here are the values: #{stash.values}"
   stash.each{|key, value| puts "#{value}, are #{key}s"}
 
-
-  #this doesn't work because i couldn't figure out how to look in an array in a hash
-  # if stash.to_a.include?(var1)
-  #   puts "Its in the bag"
-  # else
-  #   puts "its not here"
-  #
-  # end
+    puts "Do you want something from the bag?"
+  var1 = gets.chomp.to_s
+  if stash.values_at('item').to_a.pop.include?(var1) == true
+    puts "Its in the bag"
+  else
+    puts "its not here"
+  end
 end
   #begin program here
 hash_supply
