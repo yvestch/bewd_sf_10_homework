@@ -29,9 +29,19 @@ def hash_supply()
     puts "Do you want something from the bag?"
   var1 = gets.chomp.to_s
   if stash.values_at('item').to_a.pop.include?(var1) == true
-    puts "Its in the bag"
+    puts "Have an #{var1}!"
   else
     puts "its not here"
+
+  end
+  puts "Let's check some keys"
+var2 = gets.chomp
+  if stash.has_key?(var2) == true
+    puts "yep thats in there"
+  else
+    puts "nope, not found"
+  puts "Let's check some values"
+
   end
 end
   #begin program here
