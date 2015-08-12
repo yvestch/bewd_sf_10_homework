@@ -21,7 +21,8 @@ p top_dev_skills.values
 
 puts top_dev_skills.has_key?("Ruby")
 
-puts top_dev_skills.has_value?("250,000")
+puts top_dev_skills.has_value?("$250,000")
+puts top_dev_skills.has_value?("$109,460")
 
 top_dev_skills.each do |language, salary|
   puts "A developer skilled in #{language} averages a salary of #{salary} per year!"
