@@ -4,7 +4,7 @@
 puts "What string would you like to reverse?"
 
 #assign input to variable
-item = gets
+item = gets.strip.downcase #need strip to get rid of the return
 reversed = ""
 
 #print out input
@@ -19,18 +19,14 @@ while i >= 0
   i = i - 1
 end
 
-puts reversed
-
+#puts reversed
 #puts item == reversed
 #puts item.class
 #puts reversed.class
 #puts item.length
-#puts reversed.class
-###why aren't these the same??
-
-
-
-
+#puts reversed.length
+#puts item.downcase
+#puts reversed.downcase
 
 
 #tell user if item is a palindrome
