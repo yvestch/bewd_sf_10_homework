@@ -5,7 +5,7 @@
   candidates = {"Clinton" => "Democrat", "Trump" => "Republican"}
   parties = {"Democrat" => "liberal", "Republican" => "conservative"}
 
-i = 2
+i =2
 while i > 0
   puts "I think these decisions might be ""#{favorite_things.has_key?("orange")}" #returns true or false based on if key exists
    i -= 1
