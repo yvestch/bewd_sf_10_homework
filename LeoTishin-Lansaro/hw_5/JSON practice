@@ -1,0 +1,30 @@
+require 'rest-client'
+require 'pry'
+require 'json'
+
+def connection_API(url)
+  mashable_info = RestClient.get(url)
+  JSON.parse(mashable_info)
+end
+
+def listing_posts(mashable_info)
+  posts = mashable_info["new"]
+  puts " *** Found #{posts.count} posts (except Watercooler category) *** "
+  return posts
+end
+
+def read_posts(posts)
+  posts.each do |post|
+    mashable_hash(post)
+  end
+end
+
+def mashable_hash(post)
+  post_overview = {category: post["channel"], title: post["title"], post_date: post["post_date"]}
+  puts post_overview unless post["channel"] == "Watercooler"
+end
+
+mashable_url = "http://mashable.com/stories.json"
+mashable_posts_json = connection_API(mashable_url)
+posts = listing_posts(mashable_posts_json)
+read_posts(posts)
