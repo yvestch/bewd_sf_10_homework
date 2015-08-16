@@ -1,0 +1,8 @@
+def get_name (name)
+end
+
+def thinking_of(name)
+end
+
+def giving_advice(name,answer)
+end
