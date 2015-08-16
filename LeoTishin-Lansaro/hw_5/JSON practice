@@ -9,7 +9,7 @@ end
 
 def listing_posts(mashable_info)
   posts = mashable_info["new"]
-  puts " *** Found #{posts.count} posts (except Watercooler category) *** "
+  puts " *** Found #{posts.count} posts (no Watercooler category posted) *** "
   return posts
 end
 
