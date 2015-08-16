@@ -56,8 +56,9 @@ audi = {brand: "audi", model: "A8 Sedan ", year: 2015 , price: 77400 , is_electr
 
 
 cars = []
-add_cars(cars, tesla, porsche, toyota, bmw, audi)
-#cars.push(tesla, porsche, toyota, bmw, audi)
+array = []
+add_cars(array, tesla, porsche, toyota, bmw, audi)
+cars.push(tesla, porsche, toyota, bmw, audi)
 show_all_cars(cars)
 
 
