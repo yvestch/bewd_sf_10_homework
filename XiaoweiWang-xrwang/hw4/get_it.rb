@@ -15,6 +15,7 @@
 require 'rest-client'
 require 'pry'
 require 'json'
+require 'csv'
 
 
 def connect_to_api(url)
@@ -40,7 +41,9 @@ end
 
 def create_story_hash(story)
     new_story = {title: story["title"], category:story["subreddit"], upvotes: story["score"]}
-    puts new_story
+    CSV.open("api_learning_5.csv", "w") do |csv|
+      csv << [title: story["title"], category:story["subreddit"], upvotes: story["score"]]
+    end
 end
 
 def create_story_array
