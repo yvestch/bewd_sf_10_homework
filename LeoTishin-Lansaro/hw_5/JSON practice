@@ -8,23 +8,25 @@ def connection_API(url)
 end
 
 def listing_posts(mashable_info)
-  posts = mashable_info["new"]
-  puts " *** Found #{posts.count} posts (no Watercooler category posted) *** "
-  return posts
+  stories = mashable_info["new"]
+  read_new_stories(stories)
+  return stories
 end
 
-def read_posts(posts)
-  posts.each do |post|
-    mashable_hash(post)
+def read_new_stories(stories)
+  new_stories = stories.delete_if {|story| story["channel"] == "Watercooler"}
+  new_stories.each do |new_story|
+  puts mashable_hash(new_story)
   end
+  puts ""
+  puts " *** Printing only #{new_stories.count} stories. Watercooler category is excluded *** "
+  puts ""
 end
 
-def mashable_hash(post)
-  post_overview = {category: post["channel"], title: post["title"], post_date: post["post_date"]}
-  puts post_overview unless post["channel"] == "Watercooler"
+def mashable_hash(new_story)
+  new_story = {CATEGORY: new_story["channel"], TITLE: new_story["title"], UPVOTES: new_story["shares"]["total"]}
 end
 
 mashable_url = "http://mashable.com/stories.json"
 mashable_posts_json = connection_API(mashable_url)
 posts = listing_posts(mashable_posts_json)
-read_posts(posts)
