@@ -12,6 +12,7 @@
 require 'rest-client'
 require 'json'
 require 'pry'
+require 'csv'
 
 def connect_to_api(url)
   #connect to API
@@ -33,7 +34,13 @@ def print_stories(stories)
   end
   #print title, category, shares for each story
   front_page.each do |story|
-    puts "Title: #{story[:title]}, category: #{story[:category]}, shares: #{story[:shares]}"
+    #create new csv with read/write permissions
+    CSV.open("mashable_get_it.csv", "a+") do |csv|
+      #add row of title, cateogy, shares for each story to CSV
+      csv << [story[:title], story[:category], story[:shares]]
+      #print title, category, shares for each story
+      puts "Title: #{story[:title]}, category: #{story[:category]}, shares: #{story[:shares]}"
+    end
   end
 end
 
