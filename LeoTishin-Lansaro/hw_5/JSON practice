@@ -1,6 +1,7 @@
 require 'rest-client'
 require 'pry'
 require 'json'
+require 'csv'
 
 def connection_API(url)
   mashable_info = RestClient.get(url)
@@ -25,6 +26,20 @@ end
 
 def mashable_hash(new_story)
   new_story = {CATEGORY: new_story["channel"], TITLE: new_story["title"], UPVOTES: new_story["shares"]["total"]}
+  mashable_array_hash(new_story)
+end
+
+def mashable_array_hash(new_story)
+  mashable_array = Array.new
+  mashable_array.push(new_story)
+  puts "Category: #{mashable_array[0][:CATEGORY]}, Title: #{mashable_array[0][:TITLE]}, Shared: #{mashable_array[0][:UPVOTES]}"
+  generate_csv(mashable_array)
+end
+
+def generate_csv(mashable_array)
+  CSV.open("./Mashable_CSV.csv", "a+") do |csv|
+    csv << [mashable_array[0][:CATEGORY], mashable_array[0][:TITLE], mashable_array[0][:UPVOTES]]
+  end
 end
 
 mashable_url = "http://mashable.com/stories.json"
