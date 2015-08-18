@@ -28,10 +28,6 @@ def find_stories(response)
   return stories
 end
 
-  #stories2 = response["rising"]
-  #stories3 = response["hot"]
-  #return_values {stories: return stories
-
 
 def print_stories(stories)
   stories.each do |story|
