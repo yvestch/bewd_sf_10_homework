@@ -39,6 +39,7 @@ end
 
 story_array = []
 story_array << {new_story}
+fhwkfh erfh;owh
 
 
 reddit_url = "http://www.reddit.com/.json"
