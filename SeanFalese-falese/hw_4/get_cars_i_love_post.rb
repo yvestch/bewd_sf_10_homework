@@ -29,22 +29,31 @@ def parse(get_data)
 end
 
 def array(h1)
+  h2 = {}
+  arr1 = []
   h1["models"].each do |car|
-    hash(car["niceName"])
-    car["years"].each do |year|
-      hash(year["id"])
+    # hash(car["niceName"])
+    h2["niceName"] = car["niceName"]
+    arr1.push(h2)
+      car["years"].each do |year|
+      # hash(year["id"]) #trying to iterate one level deeper and pull ID's from the array
+      h2["year"] = year["id"]
+      arr1.push(h2)
+      end
     end
-  end
-end
-
-def hash(car,year)
-  h2 = {model: car["niceName"], yearID: year["id"]}
-  puts h2
+    model_pick(arr1)
 end
 
 
-def model_pick(niceNames)
-  puts niceNames
+# #create hash of model and yearID
+# def hash(car,year) #arguments are not passing from above,
+#   h2 = {model: car["niceName"], yearID: year["id"]}
+#   puts h2
+# end
+
+#select model
+def model_pick(arr1)
+  puts arr1
   puts "Select a Model from the list above to check for service bulletins"
   model = gets.chomp
   while niceNames.include?(model) != true do
