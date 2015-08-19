@@ -15,7 +15,6 @@
 require 'rest-client'
 require 'pry'
 require 'json'
-require 'csv'
 
 
 def connect_to_api(url)
@@ -24,36 +23,32 @@ def connect_to_api(url)
 end
 
 def finding_stories(response)
-  stories = response["data"]["children"]
+  stories = response["hot"]["children"]
   puts "The Reddit API has given us #{stories.count} stories"
   return stories
 end
 
-def print_stories(stories)
-  stories.each do |story|
-      title = story["data"]["title"]
-      category = story["data"]["subreddit"]
-      upvotes = story["data"]["score"]
-    # hash[Title,Category,Upvotes] = title, category, upvotes
-    create_story_hash(story["data"])
-  end
-end
-
-def create_story_hash(story)
-    new_story = {title: story["title"], category:story["subreddit"], upvotes: story["score"]}
-
-    #an attempt to do the CSV output....will return to this later, it's only outputting the first value of each story, need to loop thru...
-    CSV.open("api_learning_5.csv", "w") do |csv|
-      csv << [title: story["title"], category:story["subreddit"], upvotes: story["score"]]
-    end
-end
-
-def create_story_array
-end
+# def print_stories(stories)
+#   stories.each do |story|
+#       title = story["data"]["title"]
+#       category = story["data"]["subreddit"]
+#       upvotes = story["data"]["score"]
+#     # hash[Title,Category,Upvotes] = title, category, upvotes
+#     create_story_hash(story["data"])
+#   end
+# end
+#
+# def create_story_hash(story)
+#     new_story = {title: story["title"], category:story["subreddit"], upvotes: story["score"]}
+#     puts new_story
+# end
+#
+# def create_story_array
+# end
 
 
-reddit_url = "http://www.reddit.com/.json"
-connect_to_api(reddit_url)
-reddit_json_response = connect_to_api(reddit_url)
+mashable_url = "http://mashable.com/stories.json"
+connect_to_api(mashable_url)
+# reddit_json_response = connect_to_api(reddit_url)
 stories = finding_stories(reddit_json_response)
-print_stories(stories)
+# print_stories(stories)

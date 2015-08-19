@@ -1,3 +1,5 @@
+#second way to do love_post.... things seem less dependent on each other when i do it this way
+
 
 def love_name
   puts "Please enter the name of your love interest"
