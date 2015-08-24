@@ -2,6 +2,7 @@
 require 'pry'  #debugging tool
 require 'rest-client' #library that faciltates http requests
 require 'json' #tranforms a string response into 'json'
+require 'csv'
 
 def connect_to_api(url, which_is_it)
   response = RestClient.get(url)
@@ -36,6 +37,14 @@ def print_stories(stories, which_is_it)
   stories.each do |story|
     story = create_story_hash(story, which_is_it)
     puts "Title: #{story[:title]}. Category: #{story[:category]}. Upvotes: #{story[:upvotes]}. API Source: #{story[:provider].}"
+  end
+end
+
+def create_csv(stories, which_is_it)
+  CSV.open("./file.csv", "wb") do |csv|
+  csv << ["title", "category", "upvotes", "provider"]
+  stories.each do |story|
+  puts "Title: #{story[:title]}. Category: #{story[:category]}. Upvotes: #{story[:upvotes]}. API Source: #{story[:provider].}"
   end
 end
 
