@@ -6,7 +6,8 @@ require 'json'
 
 def connect_to_api(url)                                           #method to get data from the mashable endpoint and store it into a JSON object
   response = RestClient.get(url)                                  #Use RestClient. Use the GET method. Pass it the url. Assigns it to response
-  JSON.parse(response)                                            #uses the JSON library to parse the response
+  JSON.parse(response)
+  binding.pry                                         #uses the JSON library to parse the response
 end
 
 def story_hash(array)
