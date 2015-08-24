@@ -36,11 +36,12 @@ def array(h1)
     h2["niceName"] = car["niceName"]
     arr1.push(h2)
       car["years"].each do |year|
-      # hash(year["id"]) #trying to iterate one level deeper and pull ID's from the array
+      # hash(year["id"])
       h2["year"] = year["id"]
       arr1.push(h2)
       end
     end
+    binding.pry
     model_pick(arr1)
 end
 
@@ -56,11 +57,19 @@ def model_pick(arr1)
   puts arr1
   puts "Select a Model from the list above to check for service bulletins"
   model = gets.chomp
-  while niceNames.include?(model) != true do
+  while arr1["niceName"].include?(model) != true do
     puts "Please select a Model from the list"
     model = gets.chomp
   end
 end
+
+
+# def service_bulletins
+# end
+
+# def print_service
+# end
+
 
 
 #program begins here
