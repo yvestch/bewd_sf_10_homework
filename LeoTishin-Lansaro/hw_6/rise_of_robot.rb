@@ -1,6 +1,7 @@
 require 'pry'
 require 'pry-byebug'
 
+
 class Robot
   #creates getter && setter methods for each attribute
   attr_accessor :name, :type, :origin
@@ -35,21 +36,28 @@ class Robot
 
   #instance methods can only be called by instances of a class
   def empathy
-    "I was designed to be empathetic" if origin == "Nairobi"
+    puts "Was designed to be empathetic" if origin == "Chicago"
   end
 
   #this is an instance method
   def flying_skills
-    if type == "Super-Android"
-      "I can fly!"
+    if type == "Android"
+      puts "Flying capability"
     else
-      "I can not fly {crying}"
+      puts "No flying capability"
     end
   end
 
   def laser_fighting_skills
-    "I have laser fighting skills" unless type != "Android"
+    "Laser fighting capability" unless type != "Super-Android"
   end
 end
 
-Robot.make_robots(50)
+Robot.make_robots(5)
+
+travis_bot = Robot.new("travis", "Android", "Chicago")
+leo_bot = Robot.new("leo", "Android", "Nairobi")
+
+travis_bot.empathy # =>
+leo_bot.flying_skills
+Robot.make_robots(4)
