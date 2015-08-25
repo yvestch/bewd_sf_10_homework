@@ -14,28 +14,28 @@ require 'rest-client'
 require 'pry'
 require 'json'
 
-def connect_to_api(url)
+def connect_to_api(url) #get request api
   response = RestClient.get(url)
   JSON.parse(response)
 end
 
-def find_stories(response)
+def find_stories(response) #select array of 25 recent stories
   stories = response["new"]
   puts "\nMashable has #{stories.count} new stories\n\n"
   return stories
 end
 
-def print_stories(list)
+def print_stories(list) #print out array list of modified hash values strings
   list.each do |story|
     puts "------------------------\n\n#{story[:title]}\nfiled under: #{story[:category]}\n#{story[:upvotes]} shares\n\n"
   end
 end
 
-def create_story_hash(story)
+def create_story_hash(story) #create new hash with story category, title, and upvotes info
   {category: story["channel"], title: story["title"], upvotes: story["shares"]["total"]}
 end
 
-def create_story_array(stories)
+def create_story_array(stories) #create a new array based on the original array, but with new hash values
   stories.map { |story| create_story_hash(story) }
 end
 
