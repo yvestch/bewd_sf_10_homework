@@ -27,5 +27,6 @@ class Thermostat_l #class creation
 end
 
 temperature_range = [91, 32, 73, 44, 35, 75, 72, 68, 92, 72, 93, 71, 72, 75, 100] #ginving range of instances
+temperature_range2 = temperature_range.sample(5)
 target_fahrenheit = 72 #target instance
-Thermostat_l.detect(temperature_range, target_fahrenheit) #calling method (class method)
+Thermostat_l.detect(temperature_range2, target_fahrenheit) #calling method (class method)
