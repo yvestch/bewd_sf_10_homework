@@ -1,22 +1,17 @@
 require 'pry'
 require 'pry-byebug'
 
-class Robot #classes are never plural, name should always be capitalized, two word camel case
-  #name, model, origin
-  #constructor - a way to create an instance of a class
-  #creates getter && setter methods for each attribute
-  attr_accessor :name, :type, :origin
+class Robot
 
+  attr_accessor :name, :type, :origin #creates getter && setter methods for each attribute
 
- #this method creates new instances of the robot class
- #@intance_variables are available throughout the class
-  def initialize(name,type,origin)
-    @name = name #instance variable, always start with @
-    @type = type #instance variable
-    @origin = origin #instance variable
+  def initialize(name,type,origin) #this method creates new instances of the robot class
+    @name = name
+    @type = type
+    @origin = origin
   end
-#this is a class method
-  def self.make_robots(number) #-> do we have to put self.make_robots? can it be just .make_robots?
+
+  def self.make_robots(number) #this is a class method
     #create a new robot
     robots = number.to_i
     #robots.times do
