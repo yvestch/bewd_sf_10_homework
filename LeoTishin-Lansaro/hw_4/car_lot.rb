@@ -36,3 +36,4 @@ toyota = {brand: "Toyota", model: "Prius", year: 2016, price: 49000, is_electric
 #APPROACH - B
 cars = add_cars(tesla, ford, porshe, deloraen, toyota)
 show_all_cars(cars)
+puts "The "
