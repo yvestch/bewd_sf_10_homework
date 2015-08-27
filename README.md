@@ -43,4 +43,9 @@ Homework is given each Monday, and is always due the next Monday. Feedback on ea
 | 7          |----- No Homework ---- | [07_Ruby_Fundamentals](https://github.com/ga-students/bewd_sf_10/tree/master/07_Ruby_Fundamentals)| N/A | N/A |
 | 8          |       Complete `real_estate.rb` where you build a method to loop through a building's apartment array and find a renter, or a vacant apartment | Use your notes :)| Monday, August 31, 2015 | Wednesday, September 2, 2015 |
 | 9          |        In Trello, Complete your `Possible Pitches` card, and once you have chosen your project, complete your `Chosen Project Pitch` card, with 5 user stories.    | [Trello](https://trello.com/b/XjgJdCUm/bewd-10-projects) | Monday, August 31, 2015 | Wednesday, September 2, 2015 |
+| 10         |            | - | - | - |
+| 11         |            | - | - | - |
+| 12         |            | - | - | - |
+| 13         |            | - | - | - |
+| 14         |            | - | - | - |
 | ...        |            | - | - | - |
